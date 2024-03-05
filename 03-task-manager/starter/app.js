@@ -31,7 +31,7 @@ app.use('/api/v1/tasks', tasks); // mount the 'tasks' router at the path '/api/v
 app.use(notFound);
 app.use(errorHandlerMiddleware);
 
-const port = 7000;
+const port = process.env.PORT || 7000;
 
 const start = async () => {
   try {
